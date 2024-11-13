@@ -1,20 +1,29 @@
 {
   "name": "v3-base-admin",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "commit": "prb git-commit",
+    "commit:zh": "prb git-commit -l=zh-cn"
   },
   "dependencies": {
-    "vue": "^3.5.12"
+    "vue": "^3.5.12",
+    "@prb/scripts": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
     "typescript": "~5.6.2",
     "vite": "^5.4.10",
-    "vue-tsc": "^2.1.8"
+    "vue-tsc": "^2.1.8",
+    "tsx": "4.19.1",
+    "simple-git-hooks": "2.11.1"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm sa git-commit-verify",
+    "pre-commit": "pnpm typecheck && pnpm lint-staged"
   }
 }
