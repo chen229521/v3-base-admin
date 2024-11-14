@@ -33,12 +33,8 @@ const icon = computed(() => iconMap[props.type]);
 
 <template>
   <div class="size-full min-h-520px flex-col-center gap-24px overflow-hidden">
-    <div class="flex text-400px text-primary">
-      <!-- <SvgIcon :local-icon="icon" /> -->
-    </div>
-    <NButton type="primary" @click="routerPushByKey('root')">{{
-      // $t("common.backToHome")
-    }}</NButton>
+    <div class="flex text-400px text-primary"></div>
+    <NButton type="primary" @click="routerPushByKey('root')">{{}}</NButton>
   </div>
 </template>
 

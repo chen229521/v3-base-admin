@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ExceptionBase: typeof import('./../components/common/exception-base.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
+    NButton: typeof import('naive-ui')['NButton']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -17,6 +17,9 @@ importers:
       naive-ui:
         specifier: 2.40.1
         version: 2.40.1(vue@3.5.12(typescript@5.6.3))
+      nprogress:
+        specifier: 0.2.0
+        version: 0.2.0
       unplugin-vue-components:
         specifier: 0.27.4
         version: 0.27.4(@babel/parser@7.26.2)(rollup@4.26.0)(vue@3.5.12(typescript@5.6.3))
@@ -33,6 +36,9 @@ importers:
       '@types/node':
         specifier: 22.7.9
         version: 22.7.9
+      '@types/nprogress':
+        specifier: 0.2.3
+        version: 0.2.3
       '@vitejs/plugin-vue':
         specifier: ^5.1.4
         version: 5.1.5(vite@5.4.11(@types/node@22.7.9)(sass@1.80.4))(vue@3.5.12(typescript@5.6.3))
@@ -804,6 +810,9 @@ packages:
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+
+  '@types/nprogress@0.2.3':
+    resolution: {integrity: sha512-k7kRA033QNtC+gLc4VPlfnue58CM1iQLgn1IMAU8VPHGOj7oIHPp9UlhedEnD/Gl8evoCjwkZjlBORtZ3JByUA==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1857,6 +1866,9 @@ packages:
     resolution: {integrity: sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA==}
     engines: {node: '>=18'}
 
+  nprogress@0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+
   nypm@0.3.12:
     resolution: {integrity: sha512-D3pzNDWIvgA+7IORhD/IuWzEk4uXv6GsgOxiid4UU3h9oq5IqV1KtPDi63n4sZJ/xcWlr88c0QM2RgN5VbOhFA==}
     engines: {node: ^14.16.0 || >=16.10.0}
@@ -2883,6 +2895,8 @@ snapshots:
       undici-types: 6.19.8
 
   '@types/normalize-package-data@2.4.4': {}
+
+  '@types/nprogress@0.2.3': {}
 
   '@types/unist@3.0.3': {}
 
@@ -4141,6 +4155,8 @@ snapshots:
     dependencies:
       path-key: 4.0.0
       unicorn-magic: 0.3.0
+
+  nprogress@0.2.0: {}
 
   nypm@0.3.12:
     dependencies:

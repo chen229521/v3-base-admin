@@ -40,5 +40,15 @@ export const generatedRoutes: GeneratedRoute[] = [
     meta: {
       title: 'home'
     }
+  },
+  {
+    name: 'login',
+    path: '/login/:module(pwd-login|code-login|register|reset-pwd|bind-wechat)?',
+    component: 'layout.base$view.login',
+    props: true,
+    meta: {
+      title: 'login',
+      constant: true
+    }
   }
 ];
