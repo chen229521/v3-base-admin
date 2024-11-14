@@ -23,7 +23,8 @@
     "tsx": "4.19.1",
     "simple-git-hooks": "2.11.1",
     "sass": "1.80.4",
-    "@types/node": "22.7.9"
+    "@types/node": "22.7.9",
+    "@elegant-router/vue": "0.3.8"
   },
   "simple-git-hooks": {
     "commit-msg": "pnpm sa git-commit-verify",
