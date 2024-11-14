@@ -8,7 +8,7 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "commit": "prb git-commit",
-    "commit:zh": "prb git-commit -l=zh-cn"
+    "commit:zh": "git add . &&prb git-commit -l=zh-cn"
   },
   "dependencies": {
     "vue": "^3.5.12",
