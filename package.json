@@ -8,7 +8,8 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "commit": "prb git-commit",
-    "commit:zh": "git add . &&prb git-commit -l=zh-cn"
+    "commit:zh": "git add . &&prb git-commit -l=zh-cn",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "vue": "^3.5.12",
@@ -22,6 +23,12 @@
     "@prb/scripts": "workspace:*"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "prettier": "^2.5.1",
     "@iconify/json": "2.2.263",
     "@vitejs/plugin-vue": "^5.1.4",
     "typescript": "~5.6.2",

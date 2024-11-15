@@ -1,1 +1,1 @@
-export * from "./nprogress";
+export * from './nprogress'
