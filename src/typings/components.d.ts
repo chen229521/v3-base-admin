@@ -9,8 +9,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     ExceptionBase: typeof import('./../components/common/exception-base.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
+    IconLocalActivity: typeof import('~icons/local/activity')['default']
     NButton: typeof import('naive-ui')['NButton']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./../components/custom/svg-icon.vue')['default']
   }
 }
