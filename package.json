@@ -29,7 +29,13 @@
     "sass": "1.80.4",
     "@types/nprogress": "0.2.3",
     "@types/node": "22.7.9",
-    "@elegant-router/vue": "0.3.8"
+    "@elegant-router/vue": "0.3.8",
+    "@unocss/eslint-config": "0.63.6",
+    "@unocss/preset-icons": "0.63.6",
+    "@unocss/preset-uno": "0.63.6",
+    "@unocss/transformer-directives": "0.63.6",
+    "@unocss/transformer-variant-group": "0.63.6",
+    "@unocss/vite": "0.63.6"
   },
   "simple-git-hooks": {
     "commit-msg": "pnpm sa git-commit-verify",
