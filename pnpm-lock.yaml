@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@iconify/vue':
+        specifier: 4.1.2
+        version: 4.1.2(vue@3.5.12(typescript@5.6.3))
       '@prb/scripts':
         specifier: workspace:*
         version: link:packages/scripts
+      '@prb/uno-preset':
+        specifier: workspace:*
+        version: link:packages/uno-preset
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
@@ -33,6 +39,9 @@ importers:
       '@elegant-router/vue':
         specifier: 0.3.8
         version: 0.3.8
+      '@iconify/json':
+        specifier: 2.2.263
+        version: 2.2.263
       '@types/node':
         specifier: 22.7.9
         version: 22.7.9
@@ -111,6 +120,8 @@ importers:
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
+
+  packages/uno-preset: {}
 
 packages:
 
@@ -517,11 +528,19 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
+  '@iconify/json@2.2.263':
+    resolution: {integrity: sha512-pY6Jpfz76F+OURDt5+J9njuQSzOLKECA3ah8C210T9VfXdtkpkYWA6+l6ZCHOvhABjcoGjBvcTub8HV9QNacrw==}
+
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@iconify/utils@2.1.33':
     resolution: {integrity: sha512-jP9h6v/g0BIZx0p7XGJJVtkVnydtbgTgt9mVNcGDYwaa7UhdHdI9dvoq+gKj9sijMSJKxUPEG2JyjsgXjxL7Kw==}
+
+  '@iconify/vue@4.1.2':
+    resolution: {integrity: sha512-CQnYqLiQD5LOAaXhBrmj1mdL2/NCJvwcC4jtW2Z8ukhThiFkLDkutarTOV2trfc9EXqUqRs0KqXOL9pZ/IyysA==}
+    peerDependencies:
+      vue: '>=3'
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -2815,6 +2834,11 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
+  '@iconify/json@2.2.263':
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
+
   '@iconify/types@2.0.0': {}
 
   '@iconify/utils@2.1.33':
@@ -2828,6 +2852,11 @@ snapshots:
       mlly: 1.7.3
     transitivePeerDependencies:
       - supports-color
+
+  '@iconify/vue@4.1.2(vue@3.5.12(typescript@5.6.3))':
+    dependencies:
+      '@iconify/types': 2.0.0
+      vue: 3.5.12(typescript@5.6.3)
 
   '@isaacs/cliui@8.0.2':
     dependencies:
