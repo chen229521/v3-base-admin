@@ -12,7 +12,8 @@ export const generatedRoutes: GeneratedRoute[] = [
     component: 'layout.base$view.403',
     meta: {
       title: '403',
-      constant: true
+      constant: true,
+      i18nKey: 'route.403'
     }
   },
   {
@@ -21,7 +22,8 @@ export const generatedRoutes: GeneratedRoute[] = [
     component: 'layout.base$view.404',
     meta: {
       title: '404',
-      constant: true
+      constant: true,
+      i18nKey: 'route.404'
     }
   },
   {
@@ -30,7 +32,8 @@ export const generatedRoutes: GeneratedRoute[] = [
     component: 'layout.base$view.500',
     meta: {
       title: '500',
-      constant: true
+      constant: true,
+      i18nKey: 'route.500'
     }
   },
   {
@@ -38,7 +41,8 @@ export const generatedRoutes: GeneratedRoute[] = [
     path: '/home',
     component: 'layout.base$view.home',
     meta: {
-      title: 'home'
+      title: 'home',
+      i18nKey: 'route.home'
     }
   },
   {
@@ -48,7 +52,8 @@ export const generatedRoutes: GeneratedRoute[] = [
     props: true,
     meta: {
       title: 'login',
-      constant: true
+      constant: true,
+      i18nKey: 'route.login'
     }
   }
 ];
