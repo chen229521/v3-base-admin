@@ -11,6 +11,9 @@ importers:
       '@iconify/vue':
         specifier: 4.1.2
         version: 4.1.2(vue@3.5.12(typescript@5.6.3))
+      '@prb/hooks':
+        specifier: workspace:*
+        version: link:packages/hooks
       '@prb/scripts':
         specifier: workspace:*
         version: link:packages/scripts
@@ -120,6 +123,12 @@ importers:
       vue-tsc:
         specifier: ^2.1.8
         version: 2.1.10(typescript@5.6.3)
+
+  packages/hooks:
+    dependencies:
+      '@prb/utils':
+        specifier: workspace:*
+        version: link:../utils
 
   packages/scripts:
     devDependencies:
