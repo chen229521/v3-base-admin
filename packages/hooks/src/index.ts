@@ -1,3 +1,3 @@
 import useBoolean from './use-boolean';
-
-export { useBoolean };
+import useSvgIconRender from './use-svg-icon-render';
+export { useBoolean, useSvgIconRender };
