@@ -25,6 +25,7 @@
     "@prb/hooks": "workspace:*",
     "@prb/uno-preset": "workspace:*",
     "@prb/utils": "workspace:*",
+    "@prb/axios": "workspace:*",
     "@prb/scripts": "workspace:*"
   },
   "devDependencies": {

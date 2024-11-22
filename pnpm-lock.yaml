@@ -11,6 +11,9 @@ importers:
       '@iconify/vue':
         specifier: 4.1.2
         version: 4.1.2(vue@3.5.12(typescript@5.6.3))
+      '@prb/axios':
+        specifier: workspace:*
+        version: link:packages/axios
       '@prb/hooks':
         specifier: workspace:*
         version: link:packages/hooks
