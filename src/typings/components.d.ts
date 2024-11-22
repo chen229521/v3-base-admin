@@ -7,10 +7,16 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AppProvider: typeof import('./../components/common/app-provider.vue')['default']
     ExceptionBase: typeof import('./../components/common/exception-base.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
     IconLocalActivity: typeof import('~icons/local/activity')['default']
     NButton: typeof import('naive-ui')['NButton']
+    NConfigProvider: typeof import('naive-ui')['NConfigProvider']
+    NDialogProvider: typeof import('naive-ui')['NDialogProvider']
+    NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider']
+    NMessageProvider: typeof import('naive-ui')['NMessageProvider']
+    NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./../components/custom/svg-icon.vue')['default']

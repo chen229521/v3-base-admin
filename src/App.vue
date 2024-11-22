@@ -1,7 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-    <RouterView></RouterView>
+  <NConfigProvider class="h-full">
+    <AppProvider>
+      <RouterView></RouterView>
+    </AppProvider>
+  </NConfigProvider>
 </template>
 
 <style scoped></style>
