@@ -53,7 +53,7 @@ export function createRetryOptions(config: Partial<CreateAxiosDefaults>) {
  * @param config 部分定义的axios默认配置，用于覆盖axios配置的默认值
  * @returns 返回一个完整填充了默认值的axios配置对象
  */
-export function createAxiosConfig(config: Partial<CreateAxiosDefaults>) {
+export function createAxiosConfig(config?: Partial<CreateAxiosDefaults>) {
   const TEN_SECONDS = 10 * 1000;
 
   const axiosConfig: CreateAxiosDefaults = {
@@ -68,5 +68,6 @@ export function createAxiosConfig(config: Partial<CreateAxiosDefaults>) {
   };
 
   Object.assign(axiosConfig, config);
+
   return axiosConfig;
 }
