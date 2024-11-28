@@ -5,6 +5,7 @@
   <h3 class="text-28px text-primary font-500 lt-sm:text-22px">{{ $t('system.title') }}</h3>
   {{ a.num }}
   <n-button @click="a.num++">点击</n-button>
+  <RouterView></RouterView>
 </template>
 
 <script setup lang="ts">

@@ -9,14 +9,14 @@ export function createServiceConfig(env: Env.ImportMeta) {
   // 从环境变量中解构服务基础URL
   const { VITE_SERVICE_BASE_URL, VITE_OTHER_SERVICE_BASE_URL } = env;
 
+  console.log(VITE_OTHER_SERVICE_BASE_URL);
+
   // 初始化其他服务基础URL的配置对象
   let other = {} as Record<App.Service.OtherBaseURLKey, string>;
-
-  // 尝试解析其他服务基础URL的JSON5字符串
   try {
     other = json5.parse(VITE_OTHER_SERVICE_BASE_URL);
   } catch {
-    // 如果解析失败，则输出错误信息
+    // eslint-disable-next-line no-console
     console.error('VITE_OTHER_SERVICE_BASE_URL is not a valid json5 string');
   }
 

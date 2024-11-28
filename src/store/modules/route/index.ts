@@ -111,7 +111,7 @@ export const useRouteStore = defineStore(SetupStoreId.Route, () => {
   }
 
   async function initConstantRoute() {
-    if (isInitConstantRoute) {
+    if (isInitConstantRoute.value) {
       return;
     }
 

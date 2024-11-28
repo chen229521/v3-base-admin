@@ -1,29 +1,43 @@
 import { localStg } from '@/utils/storage';
 
-// TODO AuthStore
-// authStore
-
-// TODO fetchRefreshToken
-// fetchRefreshToken
-
 import type { RequestInstanceState } from './type';
+import { useAuthStore } from '@/store/modules/auth';
+import { fetchRefreshToken } from '../api/auth';
 
 export function getAuthorization() {
   const token = localStg.get('token');
   const Authorization = token ? `Bearer ${token}` : null;
   return Authorization;
 }
+async function handleRefreshToken() {
+  const { resetStore } = useAuthStore();
 
-// TODO handleRefreshToken
-async function handleRefreshToken() {}
+  const rToken = localStg.get('refreshToken') || '';
+  const { error, data } = await fetchRefreshToken(rToken);
+  if (!error) {
+    localStg.set('token', data.token);
+    localStg.set('refreshToken', data.refreshToken);
+    return true;
+  }
 
-export async function handleExpireRequest(state: RequestInstanceState) {
-  // TODO useRefreshToken
-  // if (!state.refreshTokenFn) {
-  //   state.refreshTokenFn = handleRefreshToken();
-  // }
+  resetStore();
+
+  return false;
 }
 
+export async function handleExpiredRequest(state: RequestInstanceState) {
+  if (!state.refreshTokenFn) {
+    state.refreshTokenFn = handleRefreshToken();
+  }
+
+  const success = await state.refreshTokenFn;
+
+  setTimeout(() => {
+    state.refreshTokenFn = null;
+  }, 1000);
+
+  return success;
+}
 export function showErrorMsg(state: RequestInstanceState, message: string) {
   if (!state.errMsgStack?.length) {
     state.errMsgStack = [];
