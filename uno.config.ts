@@ -4,7 +4,7 @@ import transformerVariantGroup from '@unocss/transformer-variant-group';
 import presetUno from '@unocss/preset-uno';
 import type { Theme } from '@unocss/preset-uno';
 import { presetSoybeanAdmin } from '@prb/uno-preset';
-import { themeVars } from '@/theme/vars';
+import { themeVars } from './src/theme/vars';
 
 export default defineConfig<Theme>({
   content: {

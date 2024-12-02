@@ -14,6 +14,9 @@ importers:
       '@prb/axios':
         specifier: workspace:*
         version: link:packages/axios
+      '@prb/color':
+        specifier: workspace:*
+        version: link:packages/color
       '@prb/hooks':
         specifier: workspace:*
         version: link:packages/hooks
@@ -157,6 +160,15 @@ importers:
       '@types/qs':
         specifier: 6.9.16
         version: 6.9.16
+
+  packages/color:
+    dependencies:
+      '@prb/utils':
+        specifier: workspace:*
+        version: link:../utils
+      colord:
+        specifier: 2.9.3
+        version: 2.9.3
 
   packages/hooks:
     dependencies:

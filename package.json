@@ -16,6 +16,7 @@
     "@prb/axios": "workspace:*",
     "@prb/hooks": "workspace:*",
     "@prb/scripts": "workspace:*",
+    "@prb/color": "workspace:*",
     "@prb/uno-preset": "workspace:*",
     "@prb/utils": "workspace:*",
     "@vueuse/core": "11.1.0",
