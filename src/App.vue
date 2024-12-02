@@ -1,9 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  defineOptions({
+    name: 'App',
+  });
+</script>
 
 <template>
   <NConfigProvider class="h-full">
     <AppProvider>
-      <RouterView></RouterView>
+      <RouterView class="bg-layout" />
     </AppProvider>
   </NConfigProvider>
 </template>

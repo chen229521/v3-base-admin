@@ -18,11 +18,7 @@ import { localStg } from '@/utils/storage';
  */
 export function createRouteGuard(router: Router) {
   router.beforeEach(async (to, from, next) => {
-    console.log(to);
-
     const location = await initRoute(to);
-    console.log(location);
-
     if (location) {
       next(location);
       return;
@@ -41,7 +37,7 @@ export function createRouteGuard(router: Router) {
     const hasRole = authStore.userInfo.roles.some((role) => routeRoles.includes(role));
 
     const hasAuth = authStore.isStaticSuper || !routeRoles.length || hasRole;
-
+    console.log(isLogin);
     const routeSwitches: CommonType.StrategicPattern[] = [
       // if it is login route when logged in, then switch to the root page
       {
@@ -84,7 +80,6 @@ export function createRouteGuard(router: Router) {
       if (condition) {
         callback();
       }
-
       return condition;
     });
   });
@@ -101,8 +96,6 @@ async function initRoute(to: RouteLocationNormalized): Promise<RouteLocationRaw 
 
   const notFoundRoute: RouteKey = 'not-found';
   const isNotFoundRoute = to.name === notFoundRoute;
-  console.log(routeStore.isInitConstantRoute);
-
   // if the constant route is not initialized, then initialize the constant route
   if (!routeStore.isInitConstantRoute) {
     await routeStore.initConstantRoute();
@@ -194,6 +187,7 @@ function handleRouteSwitch(
   next: NavigationGuardNext,
 ) {
   // route with href
+  console.log(to);
   if (to.meta.href) {
     window.open(to.meta.href, '_blank');
 

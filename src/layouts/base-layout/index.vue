@@ -1,7 +1,11 @@
 <template>
-  <RouterView>123</RouterView>
+  <RouterView></RouterView>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  defineOptions({
+    name: 'BaseLayout',
+  });
+</script>
 
 <style scoped lang="scss"></style>

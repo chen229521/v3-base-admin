@@ -13,7 +13,6 @@ export function setupElegantRouter() {
     },
     routePathTransformer(routeName, routePath) {
       const key = routeName as RouteKey;
-
       if (key === 'login') {
         const modules: UnionKey.LoginModule[] = [
           'pwd-login',

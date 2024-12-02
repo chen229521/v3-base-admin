@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
-// import { $t } from "@/locales";
-import { useRouterPush } from '@/hooks/common/router'
+  import { computed } from 'vue';
+  // import { $t } from "@/locales";
+  import { useRouterPush } from '@/hooks/common/router';
 
-defineOptions({ name: 'ExceptionBase' })
+  defineOptions({ name: 'ExceptionBase' });
 
-type ExceptionType = '403' | '404' | '500'
+  type ExceptionType = '403' | '404' | '500';
 
-interface Props {
+  interface Props {
     /**
      * Exception type
      *
@@ -15,27 +15,27 @@ interface Props {
      * - 404: not found
      * - 500: service error
      */
-    type: ExceptionType
-}
+    type: ExceptionType;
+  }
 
-const props = defineProps<Props>()
+  const props = defineProps<Props>();
 
-const { routerPushByKey } = useRouterPush()
+  const { routerPushByKey } = useRouterPush();
 
-const iconMap: Record<ExceptionType, string> = {
+  const iconMap: Record<ExceptionType, string> = {
     '403': 'no-permission',
     '404': 'not-found',
-    '500': 'service-error'
-}
+    '500': 'service-error',
+  };
 
-const icon = computed(() => iconMap[props.type])
+  const icon = computed(() => iconMap[props.type]);
 </script>
 
 <template>
-    <div class="size-full min-h-520px flex-col-center gap-24px overflow-hidden">
-        <div class="flex text-400px text-primary"></div>
-        <NButton type="primary" @click="routerPushByKey('root')">{{}}</NButton>
-    </div>
+  <div class="size-full min-h-520px flex-col-center gap-24px overflow-hidden">
+    <div class="flex text-400px text-primary"></div>
+    <NButton type="primary" @click="routerPushByKey('root')">{{}}</NButton>
+  </div>
 </template>
 
 <style scoped></style>

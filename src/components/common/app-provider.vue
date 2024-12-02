@@ -15,6 +15,7 @@
         window.$message = useMessage();
         window.$notification = useNotification();
       }
+
       register();
 
       return () => createTextVNode();
@@ -22,18 +23,17 @@
   });
 </script>
 
-<style scoped lang="scss"></style>
-
 <template>
   <NLoadingBarProvider>
     <NDialogProvider>
       <NNotificationProvider>
         <NMessageProvider>
-          <ContextHolder>
-            <slot></slot>
-          </ContextHolder>
+          <ContextHolder />
+          <slot></slot>
         </NMessageProvider>
       </NNotificationProvider>
     </NDialogProvider>
   </NLoadingBarProvider>
 </template>
+
+<style scoped></style>
