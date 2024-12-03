@@ -3,12 +3,7 @@ import { themeVars } from '@/theme/vars'
 import { toggleHtmlClass } from '@/utils/commons'
 import { localStg } from '@/utils/storage'
 import { GlobalThemeOverrides } from 'naive-ui'
-import {
-  addColorAlpha,
-  getColorPalette,
-  getPaletteColorByNumber,
-  getRgb
-} from '~/packages/color/src'
+import { addColorAlpha, getColorPalette, getPaletteColorByNumber, getRgb } from '@prb/color'
 
 // 定义暗黑模式的CSS类名常量
 const DARK_CLASS = 'drak'

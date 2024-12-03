@@ -1,9 +1,9 @@
 import { SetupStoreId } from '@/enum'
 import { localStg } from '@/utils/storage'
+import { getPaletteColorByNumber } from '@prb/color'
 import { useEventListener, usePreferredColorScheme } from '@vueuse/core'
 import { defineStore } from 'pinia'
 import { Ref, computed, effectScope, onScopeDispose, ref, toRefs, watch } from 'vue'
-import { getPaletteColorByNumber } from '~/packages/color/src'
 import {
   addThemeVarsToGlobal,
   createThemeToken,
