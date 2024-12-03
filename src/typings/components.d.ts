@@ -17,6 +17,7 @@ declare module 'vue' {
     NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
     NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
+    NWatermark: typeof import('naive-ui')['NWatermark']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./../components/custom/svg-icon.vue')['default']
